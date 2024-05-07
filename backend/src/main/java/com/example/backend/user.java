@@ -9,7 +9,7 @@ import jakarta.persistence.Id;
 public class user{
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private Long id;
+    private Number id;
     private  String name;
     private  String address;
 
@@ -21,7 +21,7 @@ public class user{
     public user() {
     }
 
-    public Long getId() {
+    public Number getId() {
         return id;
     }
 

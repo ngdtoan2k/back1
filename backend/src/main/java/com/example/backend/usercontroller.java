@@ -13,12 +13,12 @@ private final userreponsitory ur;
     public usercontroller(userreponsitory ur) {
         this.ur = ur;
     }
-    @GetMapping("")
+    @GetMapping("/users")
     public List<user> getAll(){
         return (List<user>) ur.findAll();
     }
-    @PostMapping("")
-    void addUser(@RequestBody user user){
-        ur.save(user);
-    }
+//    @PostMapping("/users")
+//    void addUser(@RequestBody user user){
+//        ur.save(user);
+//    }
 }
