@@ -4,15 +4,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import org.springframework.beans.factory.annotation.Value;
 
 @Entity
 public class user{
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private int id;
-    private String name;
-    private String address;
+    private Long id;
+    private  String name;
+    private  String address;
 
     public user(String name, String address) {
         this.name = name;
@@ -22,11 +21,11 @@ public class user{
     public user() {
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -44,5 +43,14 @@ public class user{
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "user{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                '}';
     }
 }
